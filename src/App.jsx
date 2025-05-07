@@ -36,13 +36,14 @@ function App() {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-300 via-pink-400 to-purple-300  flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700  flex flex-col items-center justify-center p-4">
+      <div><img src='./image/github.png' className='w-50' /></div>
       <h1 className="text-2xl md:text-5xl drop-shadow-lg font-bold mt-4 mb-8 md:mb-14 text-center text-white text-shadow-sm text-shadow-gray-50">GitHub Profile Finder</h1>
       
       <SearchForm onSearch={handleSearch}
       />
       
-       {error && <p className='text-red-500 mt-6 transition-opacity duration-500 ease-in-out text-lg'>{error}</p>}
+       {error && <p className='text-red-400 mt-6 transition-opacity duration-500 font-semibold ease-in-out text-xl'>{error}</p>}
            
        {userData && <ProfileCard user={userData}
        repos={repos} />}    
